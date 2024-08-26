@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Display Property and Hover Effect</title>
-  <style>
-    a {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Demonstration</title>
+    <style>
+      a {
       text-decoration: none;
       padding: 10px;
       background-color: green;
@@ -16,34 +18,82 @@
       color: green;
       border: 1px solid green;
     }
-  </style>
+        /* Task 1: Styling List Items */
+        .highlighted-list {
+            background-color: yellow;
+            padding: 10px;
+        }
+        .highlighted-list ul {
+            list-style-type: square;
+            color: red;
+        }
+
+        /* Task 2: Display Property */
+        .inline {
+            display: inline;
+            background-color: yellow;
+        }
+        .inline-block {
+            display: inline-block;
+            background-color: yellow;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid blue;
+        }
+        .block {
+            display: block;
+            background-color: yellow;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid blue;
+        }
+
+        /* Task 3: Z-Index Property */
+        .z-index-heading {
+            position: relative;
+            z-index: 1;
+        }
+        .z-index-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
-  <h1>The display Property</h1>
 
-  <h2>Task 1</h2>
-  <p>The `display: inline` property is used to display elements as inline elements.</p>
-  <div style="border: 1px solid black; padding: 10px;">
-    <span style="display: inline;">This is text</span>
-    <span style="display: inline;">This is text</span>
-    <span style="display: inline;">This is text</span>
-  </div>
+    <!-- Task 1: Highlighted List -->
+    <div class="highlighted-list">
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ul>
+    </div>
 
-  <h2>Task 2</h2>
-  <p>The `display: inline-block` property is used to display elements as inline elements, but with the ability to set their width, height, margin, and padding.</p>
-  <div style="border: 1px solid black; padding: 10px;">
-    <span style="display: inline-block; background-color: yellow; padding: 10px; margin: 5px;">Hello</span>
-    <span style="display: inline-block; background-color: yellow; padding: 10px; margin: 5px;">There</span>
-  </div>
+    <!-- Task 2: Display Property Demonstration -->
+    <h1>The display Property</h1>
 
-  <h2>Task 3`</h2>
-  <p>The `display: block` property is used to display elements as block-level elements.</p>
-  <div style="border: 1px solid black; padding: 10px;">
-    <span style="display: block; background-color: yellow; padding: 10px; margin: 5px;">Hello</span>
-    <span style="display: block; background-color: yellow; padding: 10px; margin: 5px;">There</span>
-  </div>
+    <h2>display: inline</h2>
+    <p>this is text this is text this is text <span class="inline">hello</span> <span class="inline">there</span> this is text this is text this is text</p>
 
-  <h2>Task 4</h2>
-  <a href="#">This is a link</a>
+    <h2>display: inline-block</h2>
+    <p>this is text this is text this is text <span class="inline-block">hello</span> <span class="inline-block">there</span> this is text this is text this is text</p>
+
+    <h2>display: block</h2>
+    <p>this is text this is text this is text <span class="block">hello</span> <span class="block">there</span> this is text this is text this is text</p>
+
+    <!-- Task 3: Z-Index Demonstration -->
+    <div class="z-index-container">
+        <img src="yellow-texture.png" alt="Yellow Texture" class="z-index-background">
+        <h1 class="z-index-heading">This is a heading</h1>
+        <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+    </div>
+    <!-- Task 4:Hover Effect -->
+    <h2>Hover Effect</h2>
+    <a href="#">This is a link</a>
 </body>
 </html>
